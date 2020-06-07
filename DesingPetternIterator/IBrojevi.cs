@@ -10,4 +10,6 @@ namespace DesingPetternIterator
     {
         IIterator CreateIterator();
     }
+
+  
 }
