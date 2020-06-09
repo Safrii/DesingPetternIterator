@@ -20,21 +20,35 @@ namespace DesingPetternIterator
 
         public int Next()
         {
-            return num[position++];
-
+            
+                return num[position++];
         }
 
         public bool HasNext()
         {
-            if (num.Length != position)
+            if (position != num.Length)
             {
-                return true;
+
+
+                while (position != num.Length)
+                {
+                    position++;
+                    if (num[position] % 2 == 0)
+                    {
+                        return true;
+                    }
+                    else
+                        return false;
+
+                }
+
             }
-            else return false;
+
+            return false;
 
 
         }
-
-
     }
 }
+
+
