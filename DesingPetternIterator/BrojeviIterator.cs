@@ -35,7 +35,7 @@ namespace DesingPetternIterator
                     break;
                 }   
                 position++;
-                if (num[position] > 0)
+                if (num[position] >= 0)
                 {
                     return true;
 

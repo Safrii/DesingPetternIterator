@@ -13,7 +13,7 @@ namespace DesingPetternIterator
         static void Main(string[] args)
         {
 
-            int[] array = {1,-5,9,-8,-6,5,5,5,6,-7};
+            int[] array = {-1,1,-5,9,-8,-6,0,5,5,5,6,-7,0};
 
             IBrojevi Brojevi = new Brojevi(array);
             IIterator iterator = Brojevi.CreateIterator();
