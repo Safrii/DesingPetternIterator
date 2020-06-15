@@ -14,41 +14,43 @@ namespace DesingPetternIterator
 
         public BrojeviIterator(int[] num)
         {
-            position = 0;
+            position = -1;
             this.num = num;
         }
 
         public int Next()
         {
             
-                return num[position++];
+           return num[position];
+
         }
 
         public bool HasNext()
         {
-            if (position != num.Length)
+          
+            while (num.Length  > position)
             {
-
-
-                while (position != num.Length)
+             if(num.Length - 1 == position)
                 {
-                    position++;
-                    if (num[position] % 2 == 0)
-                    {
-                        return true;
-                    }
-                    else
-                        return false;
+                    break;
+                }   
+                position++;
+                if (num[position] > 0)
+                {
+                    return true;
 
                 }
-
+                else
+                    continue;
             }
-
             return false;
+        }
+
+           
 
 
         }
     }
-}
+
 
 
